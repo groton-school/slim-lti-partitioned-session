@@ -13,7 +13,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-class PartitionedSession implements MiddlewareInterface
+class PartitionedSessionMiddleware implements MiddlewareInterface
 {
     /**
      * @param SetCookie|string|null $setCookieOrId
@@ -79,7 +79,7 @@ class PartitionedSession implements MiddlewareInterface
         return FigResponseCookies::modify(
             $response,
             session_name(),
-            fn ($setCookie) => PartitionedSession::cookie($setCookie)
+            fn ($setCookie) => PartitionedSessionMiddleware::cookie($setCookie)
         );
     }
 }

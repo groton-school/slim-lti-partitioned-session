@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace GrotonSchool\Slim\LTI\PartitionedSession\Actions;
 
 use Dflydev\FigCookies\FigResponseCookies;
-use GrotonSchool\Slim\LTI\PartitionedSession\Middleware\PartitionedSession;
+use GrotonSchool\Slim\LTI\PartitionedSession\Middleware\PartitionedSessionMiddleware;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
@@ -22,7 +22,7 @@ class ValidateSessionAction extends AbstractViewsAction
             if ($sessionId !== session_id()) {
                 $response = FigResponseCookies::set(
                     $response,
-                    PartitionedSession::cookie($sessionId)
+                    PartitionedSessionMiddleware::cookie($sessionId)
                 );
             }
         } else {
