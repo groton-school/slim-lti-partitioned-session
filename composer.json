@@ -3,7 +3,7 @@
   "license": "GPL-3.0",
   "autoload": {
     "psr-4": {
-      "GrotonSchool\\Slim\\Lti\\PartitionedSession\\": "src/"
+      "GrotonSchool\\Slim\\LTI\\PartitionedSession\\": "src/"
     }
   },
   "authors": [
