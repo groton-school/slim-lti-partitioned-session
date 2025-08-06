@@ -1,5 +1,6 @@
 {
   "name": "groton-school/slim-lti-partitioned-session",
+  "description": "Negotiate CHIPS partitioned third party session cookies from an embedded LTI Tool",
   "license": "GPL-3.0",
   "version": "1.0.0",
   "autoload": {
