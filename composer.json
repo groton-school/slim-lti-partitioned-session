@@ -1,7 +1,7 @@
 {
   "name": "groton-school/slim-lti-partitioned-session",
   "license": "GPL-3.0",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "autoload": {
     "psr-4": {
       "GrotonSchool\\Slim\\LTI\\PartitionedSession\\": "src/"
@@ -23,7 +23,7 @@
   ],
   "require": {
     "dflydev/fig-cookies": "dev-feat/chips",
-    "groton-school/slim-lti-shim": "dev-dev",
+    "groton-school/slim-lti-shim": "^2.1.0",
     "odan/session": "^6.4",
     "psr/http-message": "^2.0",
     "slim/http": "^1.4",
