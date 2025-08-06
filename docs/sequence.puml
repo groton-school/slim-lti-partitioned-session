@@ -1,0 +1,56 @@
+@startuml Third Party Session Cookie Flow
+
+actor User as user
+participant "LTI Consumer" as consumer
+participant tool [
+  LTI Tool
+  ----
+  IFRAME
+]
+participant 1p [
+  LTI Tool
+  ----
+  First Party Context
+]
+
+note over 1p : "First Party Context" means the\nURL of the tool is shown in the\nlocation bar of the browser
+user --> consumer : click tool placement
+consumer --> tool : initiate login
+activate tool
+note over tool : POST /lti/login
+tool --> consumer : authentication request
+note over consumer : POST /lti/authorize_redirect 
+consumer --> tool : authentication response
+note over tool : POST /lti/launch
+tool --> tool :  Set-Cookie: third-party-cookie\nsend session ID as query param
+note over tool : GET /lti/third-party-cookies
+
+alt third party test cookie is not received by Tool\n(likely Safari/WebKit ITP)
+
+tool -> user : require interaction
+user -> tool : click button
+note over 1p: Open in a new window
+activate 1p
+tool -> 1p : open new window\npass query params
+note over 1p : GET /lti/first-party-launch
+
+user -> 1p : click to close first party launch
+1p -> user : require interaction
+user -> 1p : click button
+1p -> tool : Set-Cookie: third-party-cookie cookie\nredirect embedded Tool\npass query params
+note over tool : GET /lti/request-storage-access
+destroy 1p
+tool -> user : require interaction
+user -> tool : click button
+tool -> user : requestStorageAccess({cookie:true})
+user -> tool : give permission
+
+end
+
+tool -> tool : pass query params
+note over tool : GET /lti/validate-session
+tool -> tool : Set-Cookie: session = query param
+note over tool : GET /
+tool -> user : resource display
+
+@enduml
