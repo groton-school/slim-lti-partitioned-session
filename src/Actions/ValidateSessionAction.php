@@ -12,11 +12,11 @@ use Slim\Http\ServerRequest;
 
 class ValidateSessionAction extends AbstractViewsAction
 {
-    public const PARAM_NAME = 'session';
+    public const PARAM_SESSION = 'session';
 
     public function __invoke(ServerRequest $request, Response $response): ResponseInterface
     {
-        $sessionId = $request->getQueryParam(self::PARAM_NAME);
+        $sessionId = $request->getQueryParam(self::PARAM_SESSION);
         if ($sessionId) {
             $response = $response->withAddedHeader('Location', '/');
             if ($sessionId !== session_id()) {

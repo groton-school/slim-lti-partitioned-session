@@ -19,7 +19,7 @@ class ThirdPartyCookieAction extends AbstractViewsAction
         if ($cookie->getValue()) {
             return $response->withAddedHeader(
                 'Location',
-                '/lti/validate-session?' . ValidateSessionAction::PARAM_NAME . '=' . $request->getQueryParam(ValidateSessionAction::PARAM_NAME)
+                '/lti/validate-session?' . ValidateSessionAction::PARAM_SESSION . '=' . $request->getQueryParam(ValidateSessionAction::PARAM_SESSION)
             );
         } else {
             return $this->views->render($response, 'firstPartyLaunchRequest.php');

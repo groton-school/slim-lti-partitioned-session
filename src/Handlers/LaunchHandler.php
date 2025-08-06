@@ -48,6 +48,6 @@ class LaunchHandler implements LaunchHandlerInterface
                 ->withSameSite(SameSite::none())
                 ->withPartitioned()
         )
-            ->withAddedHeader('Location', '/lti/third-party-cookies?' . ValidateSessionAction::PARAM_NAME . '=' . session_id());
+            ->withAddedHeader('Location', '/lti/third-party-cookies?' . ValidateSessionAction::PARAM_SESSION . '=' . session_id());
     }
 }

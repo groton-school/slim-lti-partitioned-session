@@ -71,7 +71,7 @@ class PartitionedSessionMiddleware implements MiddlewareInterface
          * session cookie as partitioned and rely on Chromium and WebKit
          * to accept the last cookie version set as final.
          */
-        $sessionId = $request->getQueryParams()[ValidateSessionAction::PARAM_NAME] ?? null;
+        $sessionId = $request->getQueryParams()[ValidateSessionAction::PARAM_SESSION] ?? null;
         if ($sessionId) {
             session_id($sessionId);
         }
