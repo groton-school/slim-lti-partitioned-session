@@ -1,0 +1,16 @@
+{
+    "name": "groton-school/slim-lti-partitioned-session",
+    "license": "GPL-3.0",
+    "autoload": {
+        "psr-4": {
+            "GrotonSchool\\SlimLtiPartitionedSession\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sbattis@groton.org"
+        }
+    ],
+    "require": {}
+}
