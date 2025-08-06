@@ -34,7 +34,6 @@ activate 1p
 tool -> 1p : open new window\npass query params
 note over 1p : GET /lti/first-party-launch
 
-user -> 1p : click to close first party launch
 1p -> user : require interaction
 user -> 1p : click button
 1p -> tool : Set-Cookie: third-party-cookie cookie\nredirect embedded Tool\npass query params
