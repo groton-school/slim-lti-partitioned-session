@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-declare(strict_types=1);
-
 namespace GrotonSchool\Slim\LTI\PartitionedSession\Middleware;
 
 use Dflydev\FigCookies\FigResponseCookies;
