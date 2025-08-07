@@ -12,13 +12,19 @@ composer require groton-school/slim-lti-partitioned-session
 
 # Use
 
-At the moment, [this is a fairly rigidly-defined package.](https://github.com/groton-school/slim-lti-partitioned-session/issues/1). In order for it to do its thing:
+This implementation expects a default [slim-skeleton](https://github.com/slimphp/Slim-Skeleton#readme) and relies on [groton-school/slim-lti-shim](https://github.com/groton-school/slim-lti-shim#readme) and [packbackbooks/lti-1p3-tool](https://github.com/packbackbooks/lti-1-3-php-library#readme) for core LTI Tool functionality.
 
-1. [`PhpSession` must be defined as a dependency.](https://github.com/groton-school/slim-skeleton/blob/17a10b398aff956544d8d281a12e07e330198274/app/dependencies.php#L77-L81)
-2. [The cookie-negotiation Actions must be assigned to specific routes.](https://github.com/groton-school/slim-skeleton/blob/17a10b398aff956544d8d281a12e07e330198274/app/routes.php#L31-L34)
-3. [`SessionStartMiddleware` and `PartitionedSessionMiddleware` must be added as middleware (in order) to routes that need access to the PHP session (including the cookie-negotiation routes and LTI OIDC launch routes)](https://github.com/groton-school/slim-skeleton/blob/17a10b398aff956544d8d281a12e07e330198274/app/routes.php#L36-L37)
+1. Optionally, implement [`SettingsInterface`](https://github.com/groton-school/slim-lti-partitioned-session/blob/main/src/SettingsInterface.php) -- alternatively[`DefaultSettings`](https://github.com/groton-school/slim-lti-partitioned-session/blob/main/src/DefaultSettings.php) are available
 
-See [groton-school/slim-skeleton](https://github.com/groton-school/slim-skeleton) for sample usage.
+2. [Define the dependency on either your `SettingsInterface` implementaton or the `DefaultSettings` implementation](https://github.com/groton-school/slim-skeleton/blob/0b32f964d753376ed2c2d9af4460e96342bbe919/app/dependencies.php#L26-L27)
+
+3. [Inject remaining dependencies](https://github.com/groton-school/slim-skeleton/blob/0b32f964d753376ed2c2d9af4460e96342bbe919/app/dependencies.php#L22)
+
+4. [Register the cookie-negotiation routes](https://github.com/groton-school/slim-skeleton/blob/0b32f964d753376ed2c2d9af4460e96342bbe919/app/routes.php#L21-L23)
+
+### groton-school/slim-skeleton@dev-lti/gae
+
+[groton-school/slim-skeleton](https://github.com/groton-school/slim-skeleton/tree/lti/gae) is the canonical example of how this shim is meant to be used.
 
 # How
 
