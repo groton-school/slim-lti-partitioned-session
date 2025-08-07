@@ -4,6 +4,19 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.2.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.1.0...v1.2.0) (2025-08-07)
+
+### Features
+
+* Add Bootstrap to views ([3262bc](https://github.com/groton-school/slim-lti-partitioned-session/commit/3262bc90fc9b67e5d09c077f0a670b4526b174ce))
+* Add separate first-party cookie ([943f79](https://github.com/groton-school/slim-lti-partitioned-session/commit/943f79c93cd36be275e68314bd59a052a7f5dac2))
+* Provide `DefaultSettings` ([d3d12e](https://github.com/groton-school/slim-lti-partitioned-session/commit/d3d12e00d0e8a10866f44c922fcb428e1e8f9676))
+* Third-party cookie is long-lasting to preserve login/permissions ([e7d9a2](https://github.com/groton-school/slim-lti-partitioned-session/commit/e7d9a2c2131c492119db519c342e423a7b6810d1))
+* Use `RouteBuilder::define()` to define cookie-negotiation routes ([ab1bc1](https://github.com/groton-school/slim-lti-partitioned-session/commit/ab1bc1c195f0173bef70edd13f15a384081f2347))
+
+
+---
+
 ## [1.1.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.0.0...v1.1.0) (2025-08-07)
 
 ### Features

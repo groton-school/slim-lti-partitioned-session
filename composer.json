@@ -1,43 +1,43 @@
 {
-  "name": "groton-school/slim-lti-partitioned-session",
-  "description": "Negotiate CHIPS partitioned third party session cookies from an embedded LTI Tool",
-  "license": "GPL-3.0",
-  "version": "1.1.0",
-  "autoload": {
-    "psr-4": {
-      "GrotonSchool\\Slim\\LTI\\PartitionedSession\\": "src/"
+    "name": "groton-school/slim-lti-partitioned-session",
+    "description": "Negotiate CHIPS partitioned third party session cookies from an embedded LTI Tool",
+    "license": "GPL-3.0",
+    "version": "1.2.0",
+    "autoload": {
+        "psr-4": {
+            "GrotonSchool\\Slim\\LTI\\PartitionedSession\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sbattis@groton.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/battis/dflydev-fig-cookies.git"
+        }
+    ],
+    "require": {
+        "dflydev/fig-cookies": "dev-feat/chips",
+        "groton-school/slim-lti-shim": "^2.3.0",
+        "odan/session": "^6.4",
+        "php-di/php-di": "^7.0",
+        "psr/container": "^2.0",
+        "psr/http-message": "^2.0",
+        "slim/http": "^1.4",
+        "slim/php-view": "^3.4",
+        "slim/slim": "^4.14"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.85",
+        "marcocesarato/php-conventional-changelog": "^1.17"
+    },
+    "config": {
+        "sort-packages": true
     }
-  },
-  "authors": [
-    {
-      "name": "Seth Battis",
-      "email": "sbattis@groton.org"
-    }
-  ],
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/battis/dflydev-fig-cookies.git"
-    }
-  ],
-  "require": {
-    "dflydev/fig-cookies": "dev-feat/chips",
-    "groton-school/slim-lti-shim": "^2.3.0",
-    "odan/session": "^6.4",
-    "php-di/php-di": "^7.0",
-    "psr/container": "^2.0",
-    "psr/http-message": "^2.0",
-    "slim/http": "^1.4",
-    "slim/php-view": "^3.4",
-    "slim/slim": "^4.14"
-  },
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.85",
-    "marcocesarato/php-conventional-changelog": "^1.17"
-  },
-  "config": {
-    "sort-packages": true
-  }
 }
