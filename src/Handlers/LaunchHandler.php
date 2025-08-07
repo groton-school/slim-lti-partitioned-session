@@ -40,12 +40,7 @@ class LaunchHandler implements LaunchHandlerInterface
         }
         return FigResponseCookies::set(
             $response,
-            SetCookie::createRememberedForever(ThirdPartyCookieAction::COOKIE_NAME)
-                ->withValue('true')
-                ->withPath('/')
-                ->withSecure()
-                ->withSameSite(SameSite::none())
-                ->withPartitioned()
+            ThirdPartyCookieAction::cookie()
         )
             ->withAddedHeader('Location', '/lti/third-party-cookies?' . ValidateSessionAction::PARAM_SESSION . '=' . session_id());
     }

@@ -13,15 +13,24 @@ use Slim\Http\ServerRequest;
 
 class FirstPartyLaunchAction extends AbstractViewsAction
 {
+    public static function cookie()
+    {
+        return SetCookie::createRememberedForever('first-party')
+            ->withValue('true')
+            ->withPath('/')
+            ->withSecure()
+            ->withSameSite(SameSite::none())
+            ->withPartitioned();
+    }
+
     public function __invoke(ServerRequest $request, Response $response): ResponseInterface
     {
         return FigResponseCookies::set(
-            $this->views->render($response, 'firstPartyLaunch.php'),
-            SetCookie::createRememberedForever(ThirdPartyCookieAction::COOKIE_NAME)
-                ->withValue('true')
-                ->withPath('/')
-                ->withSecure()
-                ->withSameSite(SameSite::none())
+            FigResponseCookies::set(
+                $this->views->render($response, 'firstPartyLaunch.php'),
+                ThirdPartyCookieAction::cookie()
+            ),
+            self::cookie()
         );
     }
 }

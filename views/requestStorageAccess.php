@@ -29,7 +29,7 @@ use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ThirdPartyCookieAction;
                 cookie: true
             }).then(() => {
                 console.log('setting third party cookie');
-                document.cookie = '<?= ThirdPartyCookieAction::COOKIE_NAME ?>=true; Path=/; MaxAge=3600; Secure; SameSite=None; Partitioned';
+                document.cookie = '<?= ThirdPartyCookieAction::cookie() ?>';
                 window.location.href = `https://${window.location.hostname}/lti/third-party-cookies${window.location.search}`
             }).catch(console.error);
         });

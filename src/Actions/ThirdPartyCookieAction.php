@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace GrotonSchool\Slim\LTI\PartitionedSession\Actions;
 
 use Dflydev\FigCookies\FigRequestCookies;
+use Dflydev\FigCookies\Modifier\SameSite;
+use Dflydev\FigCookies\SetCookie;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
@@ -12,6 +14,16 @@ use Slim\Http\ServerRequest;
 class ThirdPartyCookieAction extends AbstractViewsAction
 {
     public const COOKIE_NAME = 'third-party-cookie';
+
+    public static function cookie()
+    {
+        return SetCookie::createRememberedForever(self::COOKIE_NAME)
+            ->withValue('true')
+            ->withPath('/')
+            ->withSecure()
+            ->withSameSite(SameSite::none())
+            ->withPartitioned();
+    }
 
     public function __invoke(ServerRequest $request, Response $response): ResponseInterface
     {
