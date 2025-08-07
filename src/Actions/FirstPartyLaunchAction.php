@@ -17,7 +17,7 @@ class FirstPartyLaunchAction extends AbstractViewsAction
     {
         return FigResponseCookies::set(
             $this->views->render($response, 'firstPartyLaunch.php'),
-            SetCookie::create(ThirdPartyCookieAction::COOKIE_NAME)
+            SetCookie::createRememberedForever(ThirdPartyCookieAction::COOKIE_NAME)
                 ->withValue('true')
                 ->withPath('/')
                 ->withSecure()

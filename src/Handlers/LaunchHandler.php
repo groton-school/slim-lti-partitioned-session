@@ -40,10 +40,9 @@ class LaunchHandler implements LaunchHandlerInterface
         }
         return FigResponseCookies::set(
             $response,
-            SetCookie::create(ThirdPartyCookieAction::COOKIE_NAME)
+            SetCookie::createRememberedForever(ThirdPartyCookieAction::COOKIE_NAME)
                 ->withValue('true')
                 ->withPath('/')
-                ->withMaxAge(3600)
                 ->withSecure()
                 ->withSameSite(SameSite::none())
                 ->withPartitioned()
