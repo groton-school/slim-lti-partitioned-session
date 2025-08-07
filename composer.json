@@ -26,6 +26,8 @@
     "dflydev/fig-cookies": "dev-feat/chips",
     "groton-school/slim-lti-shim": "dev-dev",
     "odan/session": "^6.4",
+    "php-di/php-di": "^7.0",
+    "psr/container": "^2.0",
     "psr/http-message": "^2.0",
     "slim/http": "^1.4",
     "slim/php-view": "^3.4",
