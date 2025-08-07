@@ -22,7 +22,7 @@ class Dependencies
 
             SessionManagerInterface::class => DI\get(SessionInterface::class),
             SessionInterface::class => function (ContainerInterface $container) {
-                $options = $container->get(SettingsInterface::class)->get(SessionInterface::class);
+                $options = $container->get(SettingsInterface::class)->getSessionOptions();
                 return new PhpSession($options);
             }
         ]);
