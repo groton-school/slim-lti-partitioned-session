@@ -10,6 +10,7 @@ use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ThirdPartyCookieAction;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Request Storage Access</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 
 <body>
@@ -21,8 +22,9 @@ use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ThirdPartyCookieAction;
             <li style="text-decoration: line-through">Engage with the app in the first-party context</li>
             <li>Give explict permission to the app to store partitioned third-party cookies.</li>
         </ol>
-        <button id="request">Give explict permission to the app to store partitioned third-party cookies.</button>
+        <button class="btn btn-primary" id="request">Give explict permission to the app to store partitioned third-party cookies.</button>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script type="text/javascript">
         document.getElementById('request').addEventListener('click', () => {
             document.requestStorageAccess({
