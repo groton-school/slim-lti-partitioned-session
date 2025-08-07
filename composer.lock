@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca2861cc1a2504bed01824fa776fcaa4",
+    "content-hash": "93e082b17cb039a4925775760da9283b",
     "packages": [
         {
             "name": "dflydev/fig-cookies",
@@ -140,12 +140,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/groton-school/slim-lti-shim.git",
-                "reference": "5c38084c47fc7eda30c4469a086fdf808b66d0a1"
+                "reference": "7eba08d4631dce69a0618da9e35ca531a9449694"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/5c38084c47fc7eda30c4469a086fdf808b66d0a1",
-                "reference": "5c38084c47fc7eda30c4469a086fdf808b66d0a1",
+                "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/7eba08d4631dce69a0618da9e35ca531a9449694",
+                "reference": "7eba08d4631dce69a0618da9e35ca531a9449694",
                 "shasum": ""
             },
             "require": {
@@ -184,7 +184,7 @@
                 "issues": "https://github.com/groton-school/slim-lti-shim/issues",
                 "source": "https://github.com/groton-school/slim-lti-shim/tree/dev"
             },
-            "time": "2025-08-07T15:57:23+00:00"
+            "time": "2025-08-07T17:36:10+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
