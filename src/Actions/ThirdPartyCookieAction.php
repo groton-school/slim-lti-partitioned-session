@@ -34,7 +34,13 @@ class ThirdPartyCookieAction extends AbstractViewsAction
                 '/lti/validate-session?' . ValidateSessionAction::PARAM_SESSION . '=' . $request->getQueryParam(ValidateSessionAction::PARAM_SESSION)
             );
         } else {
-            return $this->views->render($response, 'firstPartyLaunchRequest.php');
+            return $this->views->render(
+                $response,
+                'firstPartyLaunchRequest.php',
+                [
+                    'title' => 'Third Party Cookie Test'
+                ]
+            );
         }
     }
 }

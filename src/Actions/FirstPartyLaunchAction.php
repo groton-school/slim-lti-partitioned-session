@@ -27,7 +27,13 @@ class FirstPartyLaunchAction extends AbstractViewsAction
     {
         return FigResponseCookies::set(
             FigResponseCookies::set(
-                $this->views->render($response, 'firstPartyLaunch.php'),
+                $this->views->render(
+                    $response,
+                    'firstPartyLaunch.php',
+                    [
+                        'title' => 'Firat Party Context'
+                    ]
+                ),
                 ThirdPartyCookieAction::cookie()
             ),
             self::cookie()

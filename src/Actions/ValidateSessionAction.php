@@ -26,10 +26,15 @@ class ValidateSessionAction extends AbstractViewsAction
                 );
             }
         } else {
-            $response = $this->views->render($response, 'error.php', [
-                'error' => 'Bad Request',
-                'message' => 'Unable to validate session.'
-            ])->withStatus(400);
+            $response = $this->views->render(
+                $response,
+                'error.php',
+                [
+                    'title' => 'Error',
+                    'error' => 'Bad Request',
+                    'message' => 'Unable to validate session.'
+                ]
+            )->withStatus(400);
         }
         return $response;
     }

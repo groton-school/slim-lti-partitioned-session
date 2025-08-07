@@ -12,6 +12,12 @@ class RequestStorageAccessAction extends AbstractViewsAction
 {
     public function __invoke(ServerRequest $request, Response $response): ResponseInterface
     {
-        return $this->views->render($response, 'requestStorageAccess.php');
+        return $this->views->render(
+            $response,
+            'requestStorageAccess.php',
+            [
+                'title' => 'Request Storage Access'
+            ]
+        );
     }
 }

@@ -13,5 +13,6 @@ abstract class AbstractViewsAction
     public function __construct()
     {
         $this->views = new PhpRenderer(__DIR__ . '/../../views');
+        $this->views->setLayout('layout.php');
     }
 }
