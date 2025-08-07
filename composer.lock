@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a38d543e9e2605cd67a7e599122ed06b",
+    "content-hash": "0ee5183b76218dd3ea71cc302b696d9b",
     "packages": [
         {
             "name": "dflydev/fig-cookies",
@@ -136,16 +136,16 @@
         },
         {
             "name": "groton-school/slim-lti-shim",
-            "version": "dev-dev",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/groton-school/slim-lti-shim.git",
-                "reference": "7eba08d4631dce69a0618da9e35ca531a9449694"
+                "reference": "bda1b2e3a327964e5ff42aeabb94cd4918e21402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/7eba08d4631dce69a0618da9e35ca531a9449694",
-                "reference": "7eba08d4631dce69a0618da9e35ca531a9449694",
+                "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/bda1b2e3a327964e5ff42aeabb94cd4918e21402",
+                "reference": "bda1b2e3a327964e5ff42aeabb94cd4918e21402",
                 "shasum": ""
             },
             "require": {
@@ -182,9 +182,9 @@
             "description": "Shim to use packbackbooks/lti-1p3-tool in a Slim Skeleton app",
             "support": {
                 "issues": "https://github.com/groton-school/slim-lti-shim/issues",
-                "source": "https://github.com/groton-school/slim-lti-shim/tree/dev"
+                "source": "https://github.com/groton-school/slim-lti-shim/tree/v2.3.0"
             },
-            "time": "2025-08-07T17:36:10+00:00"
+            "time": "2025-08-07T22:06:16+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -4290,8 +4290,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "dflydev/fig-cookies": 20,
-        "groton-school/slim-lti-shim": 20
+        "dflydev/fig-cookies": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
