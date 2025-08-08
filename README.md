@@ -22,9 +22,9 @@ This implementation expects a default [slim-skeleton](https://github.com/slimphp
 
 4. [Register the cookie-negotiation routes](https://github.com/groton-school/slim-skeleton/blob/0b32f964d753376ed2c2d9af4460e96342bbe919/app/routes.php#L21-L23)
 
-### groton-school/slim-skeleton@dev-lti/gae
+### groton-school/slim-skeleton@dev-gae/lti-tool
 
-[groton-school/slim-skeleton](https://github.com/groton-school/slim-skeleton/tree/lti/gae) is the canonical example of how this shim is meant to be used.
+[groton-school/slim-skeleton](https://github.com/groton-school/slim-skeleton/tree/gae/lti-tool) is the canonical example of how this shim is meant to be used.
 
 # How
 
