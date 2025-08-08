@@ -29,8 +29,7 @@ class ThirdPartyCookieAction extends AbstractViewsAction
     {
         $cookie = FigRequestCookies::get($request, self::COOKIE_NAME);
         if ($cookie->getValue()) {
-            return $response->withAddedHeader(
-                'Location',
+            return $response->withRedirect(
                 '/lti/validate-session?' . ValidateSessionAction::PARAM_SESSION . '=' . $request->getQueryParam(ValidateSessionAction::PARAM_SESSION)
             );
         } else {

@@ -6,5 +6,6 @@ namespace GrotonSchool\Slim\LTI\PartitionedSession;
 
 interface SettingsInterface
 {
+    public function getValidatedSessionRedirectUrl(): string;
     public function getSessionOptions(): array;
 }
