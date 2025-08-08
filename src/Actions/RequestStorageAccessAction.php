@@ -12,7 +12,8 @@ class RequestStorageAccessAction extends AbstractViewsAction
 {
     protected function invokeHook(
         ServerRequest $request,
-        Response $response
+        Response $response,
+        array $args = []
     ): ResponseInterface {
         return $this->views->render(
             $response,

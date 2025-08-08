@@ -25,7 +25,8 @@ class FirstPartyLaunchAction extends AbstractViewsAction
 
     protected function invokeHook(
         ServerRequest $request,
-        Response $response
+        Response $response,
+        array $args = []
     ): ResponseInterface {
         return FigResponseCookies::set(
             FigResponseCookies::set(

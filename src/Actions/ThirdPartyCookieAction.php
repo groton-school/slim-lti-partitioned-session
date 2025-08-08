@@ -27,7 +27,8 @@ class ThirdPartyCookieAction extends AbstractViewsAction
 
     protected function invokeHook(
         ServerRequest $request,
-        Response $response
+        Response $response,
+        array $args = []
     ): ResponseInterface {
         $cookie = FigRequestCookies::get($request, self::COOKIE_NAME);
         if ($cookie->getValue()) {

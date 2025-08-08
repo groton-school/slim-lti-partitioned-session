@@ -21,7 +21,8 @@ class ValidateSessionAction extends AbstractViewsAction
 
     protected function invokeHook(
         ServerRequest $request,
-        Response $response
+        Response $response,
+        array $args = []
     ): ResponseInterface {
         $sessionId = $request->getQueryParam(self::PARAM_SESSION);
         if ($sessionId) {
