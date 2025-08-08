@@ -25,6 +25,7 @@
     "require": {
         "dflydev/fig-cookies": "dev-feat/chips",
         "groton-school/slim-lti-shim": "^2.3.0",
+        "groton-school/slim-norms": "^1.0",
         "odan/session": "^6.4",
         "php-di/php-di": "^7.0",
         "psr/container": "^2.0",

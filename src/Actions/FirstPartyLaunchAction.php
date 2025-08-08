@@ -23,8 +23,10 @@ class FirstPartyLaunchAction extends AbstractViewsAction
             ->withPartitioned();
     }
 
-    public function __invoke(ServerRequest $request, Response $response): ResponseInterface
-    {
+    protected function invokeHook(
+        ServerRequest $request,
+        Response $response
+    ): ResponseInterface {
         return FigResponseCookies::set(
             FigResponseCookies::set(
                 $this->views->render(

@@ -10,8 +10,10 @@ use Slim\Http\ServerRequest;
 
 class RequestStorageAccessAction extends AbstractViewsAction
 {
-    public function __invoke(ServerRequest $request, Response $response): ResponseInterface
-    {
+    protected function invokeHook(
+        ServerRequest $request,
+        Response $response
+    ): ResponseInterface {
         return $this->views->render(
             $response,
             'requestStorageAccess.php',

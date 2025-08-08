@@ -25,8 +25,10 @@ class ThirdPartyCookieAction extends AbstractViewsAction
             ->withPartitioned();
     }
 
-    public function __invoke(ServerRequest $request, Response $response): ResponseInterface
-    {
+    protected function invokeHook(
+        ServerRequest $request,
+        Response $response
+    ): ResponseInterface {
         $cookie = FigRequestCookies::get($request, self::COOKIE_NAME);
         if ($cookie->getValue()) {
             return $response->withRedirect(

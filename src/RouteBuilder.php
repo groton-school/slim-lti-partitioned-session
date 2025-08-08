@@ -8,12 +8,14 @@ use GrotonSchool\Slim\LTI\PartitionedSession\Actions\FirstPartyLaunchAction;
 use GrotonSchool\Slim\LTI\PartitionedSession\Actions\RequestStorageAccessAction;
 use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ThirdPartyCookieAction;
 use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ValidateSessionAction;
+use GrotonSchool\Slim\Norms\RouteBuilderInterface;
 use Slim\App;
 use Slim\Interfaces\RouteCollectorProxyInterface;
+use Slim\Interfaces\RouteGroupInterface;
 
-class RouteBuilder
+class RouteBuilder implements RouteBuilderInterface
 {
-    public static function define(App $app)
+    public static function define(App $app): RouteGroupInterface
     {
         return $app->group('/lti', function (RouteCollectorProxyInterface $session) {
             $session->get('/third-party-cookies', ThirdPartyCookieAction::class);

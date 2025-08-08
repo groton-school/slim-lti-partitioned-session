@@ -8,14 +8,15 @@ use DI;
 use DI\ContainerBuilder;
 use GrotonSchool\Slim\LTI\Handlers\LaunchHandlerInterface;
 use GrotonSchool\Slim\LTI\PartitionedSession\Handlers\LaunchHandler;
+use GrotonSchool\Slim\Norms\DependenciesInterface;
 use Odan\Session\PhpSession;
 use Odan\Session\SessionInterface;
 use Odan\Session\SessionManagerInterface;
 use Psr\Container\ContainerInterface;
 
-class Dependencies
+class Dependencies implements DependenciesInterface
 {
-    public static function inject(ContainerBuilder $containerBuilder)
+    public static function inject(ContainerBuilder $containerBuilder): void
     {
         $containerBuilder->addDefinitions([
             LaunchHandlerInterface::class => DI\autowire(LaunchHandler::class),
