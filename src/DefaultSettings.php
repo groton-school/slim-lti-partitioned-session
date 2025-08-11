@@ -14,7 +14,12 @@ class DefaultSettings implements SettingsInterface
             'cookie_samesite' => 'None',
             'secure' => true,
             'httponly' => true,
-            'partitioned' => true // doesn't do anything, but true
+            'partitioned' => true
         ];
+    }
+
+    public function getValidatedSessionRedirectUrl(): string
+    {
+        return '/';
     }
 }

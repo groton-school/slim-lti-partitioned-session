@@ -8,6 +8,7 @@ use GrotonSchool\Slim\LTI\PartitionedSession\Actions\FirstPartyLaunchAction;
 use GrotonSchool\Slim\LTI\PartitionedSession\Actions\RequestStorageAccessAction;
 use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ThirdPartyCookieAction;
 use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ValidateSessionAction;
+use GrotonSchool\Slim\LTI\PartitionedSession\Middleware\PartitionedSessionStartMiddleware;
 use GrotonSchool\Slim\Norms\RouteBuilderInterface;
 use Slim\App;
 use Slim\Interfaces\RouteCollectorProxyInterface;
@@ -22,6 +23,7 @@ class RouteBuilder implements RouteBuilderInterface
             $session->get('/first-party-launch', FirstPartyLaunchAction::class);
             $session->get('/request-storage-access', RequestStorageAccessAction::class);
             $session->get('/validate-session', ValidateSessionAction::class);
-        });
+        })
+            ->add(PartitionedSessionStartMiddleware::class);
     }
 }

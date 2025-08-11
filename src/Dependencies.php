@@ -7,9 +7,9 @@ namespace GrotonSchool\Slim\LTI\PartitionedSession;
 use DI;
 use DI\ContainerBuilder;
 use GrotonSchool\Slim\LTI\Handlers\LaunchHandlerInterface;
+use GrotonSchool\Slim\LTI\PartitionedSession\PartitionedSession;
 use GrotonSchool\Slim\LTI\PartitionedSession\Handlers\LaunchHandler;
 use GrotonSchool\Slim\Norms\DependenciesInterface;
-use Odan\Session\PhpSession;
 use Odan\Session\SessionInterface;
 use Odan\Session\SessionManagerInterface;
 use Psr\Container\ContainerInterface;
@@ -24,7 +24,7 @@ class Dependencies implements DependenciesInterface
             SessionManagerInterface::class => DI\get(SessionInterface::class),
             SessionInterface::class => function (ContainerInterface $container) {
                 $options = $container->get(SettingsInterface::class)->getSessionOptions();
-                return new PhpSession($options);
+                return new PartitionedSession($options);
             }
         ]);
     }

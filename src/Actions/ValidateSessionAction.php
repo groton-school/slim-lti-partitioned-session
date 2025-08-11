@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace GrotonSchool\Slim\LTI\PartitionedSession\Actions;
 
 use Dflydev\FigCookies\FigResponseCookies;
-use GrotonSchool\Slim\LTI\PartitionedSession\Middleware\PartitionedSessionMiddleware;
+use GrotonSchool\Slim\LTI\PartitionedSession\Middleware\PartitionedSessionStartMiddleware;
 use GrotonSchool\Slim\LTI\PartitionedSession\SettingsInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Response;
@@ -17,6 +17,7 @@ class ValidateSessionAction extends AbstractViewsAction
 
     public function __construct(private SettingsInterface $settings)
     {
+        parent::__construct();
     }
 
     protected function invokeHook(
@@ -29,12 +30,14 @@ class ValidateSessionAction extends AbstractViewsAction
             $response = $response->withRedirect(
                 $this->settings->getValidatedSessionRedirectUrl()
             );
+            /*
             if ($sessionId !== session_id()) {
                 $response = FigResponseCookies::set(
                     $response,
-                    PartitionedSessionMiddleware::cookie($sessionId)
+                    PartitionedSessionStartMiddleware::cookie($sessionId)
                 );
             }
+                */
         } else {
             $response = $this->views->render(
                 $response,
