@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.1](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.0...v1.3.1) (2025-08-12)
+
+### Bug Fixes
+
+* `DefaultSettings` redirect to `/` after validating session ([4739a8](https://github.com/groton-school/slim-lti-partitioned-session/commit/4739a811ae2ee5574bd9ba076e866ef327139717))
+
+
+---
+
 ## [1.3.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.2.0...v1.3.0) (2025-08-12)
 
 ### Features
