@@ -51,7 +51,7 @@ class PartitionedSessionMiddleware implements MiddlewareInterface
                     $setCookie = $setCookie->withHttpOnly($value);
                     break;
                 case 'samesite':
-                    $setCookie = $setCookie->withSameSite(SameSite::fromString($value));
+                    $setCookie = $setCookie->withSameSite(SameSite::none());
                     break;
             }
         }
