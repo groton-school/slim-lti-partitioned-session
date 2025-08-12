@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.2.0...v1.3.0) (2025-08-12)
+
+### Features
+
+* Configurable redirect after validated session ([4ddd9f](https://github.com/groton-school/slim-lti-partitioned-session/commit/4ddd9fd061e1534f7f3bfe900623e9c1aa009fb2))
+
+
+---
+
 ## [1.2.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.1.0...v1.2.0) (2025-08-07)
 
 ### Features
