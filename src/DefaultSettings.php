@@ -6,6 +6,11 @@ namespace GrotonSchool\Slim\LTI\PartitionedSession;
 
 class DefaultSettings implements SettingsInterface
 {
+    public function getValidatedSessionRedirectUrl(): string
+    {
+        return '/';
+    }
+
     public function getSessionOptions(): array
     {
         return [
