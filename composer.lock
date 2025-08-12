@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b83aefeaa7ec8cae223dce6744978f3b",
+    "content-hash": "76b99269ecdc98921be897edad868af7",
     "packages": [
         {
             "name": "dflydev/fig-cookies",
@@ -136,21 +136,24 @@
         },
         {
             "name": "groton-school/slim-lti-shim",
-            "version": "2.3.0",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/groton-school/slim-lti-shim.git",
-                "reference": "bda1b2e3a327964e5ff42aeabb94cd4918e21402"
+                "reference": "daca284fd466f502f2f9bdc2657da130d41b5049"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/bda1b2e3a327964e5ff42aeabb94cd4918e21402",
-                "reference": "bda1b2e3a327964e5ff42aeabb94cd4918e21402",
+                "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/daca284fd466f502f2f9bdc2657da130d41b5049",
+                "reference": "daca284fd466f502f2f9bdc2657da130d41b5049",
                 "shasum": ""
             },
             "require": {
+                "dflydev/fig-cookies": "dev-feat/chips",
                 "ext-json": "*",
                 "ext-openssl": "*",
+                "groton-school/slim-norms": "^1.0",
+                "odan/session": "^6.4",
                 "packbackbooks/lti-1p3-tool": "^6.3",
                 "php-di/php-di": ">=6.0",
                 "psr/http-message": "^2.0",
@@ -182,9 +185,9 @@
             "description": "Shim to use packbackbooks/lti-1p3-tool in a Slim Skeleton app",
             "support": {
                 "issues": "https://github.com/groton-school/slim-lti-shim/issues",
-                "source": "https://github.com/groton-school/slim-lti-shim/tree/v2.3.0"
+                "source": "https://github.com/groton-school/slim-lti-shim/tree/dev"
             },
-            "time": "2025-08-07T22:06:16+00:00"
+            "time": "2025-08-12T18:51:51+00:00"
         },
         {
             "name": "groton-school/slim-norms",
@@ -4337,7 +4340,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "dflydev/fig-cookies": 20
+        "dflydev/fig-cookies": 20,
+        "groton-school/slim-lti-shim": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
