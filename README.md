@@ -4,13 +4,21 @@ Negotiate CHIPS partitioned third party session cookies from an embedded LTI Too
 
 [![Latest Version](https://img.shields.io/packagist/v/groton-school/slim-lti-partitioned-session.svg)](https://packagist.org/packages/groton-school/slim-lti-partitioned-session)
 
-# Install
+<div style="background:pink;padding: 0 1em; border:solid 2px red; border-radius: 1em;">
+
+## <span style="color:red;">Caution</span>
+
+This package is likely going to be fragmented into three separate, more-focused packages in the near future: one to [implement a partitioned session cookie version of `Odan\Session\PhpSession`](https://github.com/groton-school/slim-lti-partitioned-session/commit/acc6830582f672d1955a39403a4c00cdce746a4a), one to [negotiate the third-party cookie on the Slim Framework](https://github.com/groton-school/slim-lti-partitioned-session/blob/main/src/RouteBuilder.php), and [one to implement the LTI `LaunchHandler`](https://github.com/groton-school/slim-lti-partitioned-session/blob/main/src/Handlers/LaunchHandler.php) that directs into the third-party cookie negoation.
+
+</div>
+
+## Install
 
 ```shell
 composer require groton-school/slim-lti-partitioned-session
 ```
 
-# Use
+## Use
 
 This implementation expects a default [slim-skeleton](https://github.com/slimphp/Slim-Skeleton#readme) and relies on [groton-school/slim-lti-shim](https://github.com/groton-school/slim-lti-shim#readme) and [packbackbooks/lti-1p3-tool](https://github.com/packbackbooks/lti-1-3-php-library#readme) for core LTI Tool functionality.
 
@@ -26,7 +34,7 @@ This implementation expects a default [slim-skeleton](https://github.com/slimphp
 
 [groton-school/slim-skeleton](https://github.com/groton-school/slim-skeleton/tree/gae/lti-tool) is the canonical example of how this shim is meant to be used.
 
-# How
+## How
 
 Given the insidiuous prevalance of user-tracking web technologies, and the use of third-party cookies to facilitate them, many browsers have imposed hard limits on the use of third-party cookies. This is awkward, because the LTI standard is built on the assumption that a) third-party cookies will be readily available for the OIDC handshake and launch and b) most resources will be embedded in a third-party IFRAME context.
 
