@@ -10,7 +10,6 @@
 </div>
 <script type="text/javascript">
   document.getElementById('request').addEventListener('click', () => {
-    console.log('launching in first party context');
     const popup = window.open('', '_blank');
     popup.location.href = `https://${window.location.hostname}/lti/first-party-launch${window.location.search}`;
   });

@@ -18,7 +18,6 @@ use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ThirdPartyCookieAction;
         document.requestStorageAccess({
             cookie: true
         }).then(() => {
-            console.log('setting third party cookie');
             document.cookie = '<?= ThirdPartyCookieAction::cookie() ?>';
             window.location.href = `https://${window.location.hostname}/lti/third-party-cookies${window.location.search}`
         }).catch(console.error);
