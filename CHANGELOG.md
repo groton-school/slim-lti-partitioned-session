@@ -4,6 +4,16 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.2](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.1...v1.3.2) (2025-08-13)
+
+### Bug Fixes
+
+* Override incompatible `samesite` options with `none` ([135409](https://github.com/groton-school/slim-lti-partitioned-session/commit/13540931cffdda7643c488cd9f4c1c297b8093cd))
+* Remove extraneous console output ([3ce59c](https://github.com/groton-school/slim-lti-partitioned-session/commit/3ce59cf7a4bbda91222f9b3132e4ab26d2e85ab6))
+
+
+---
+
 ## [1.3.1](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.0...v1.3.1) (2025-08-12)
 
 ### Bug Fixes
