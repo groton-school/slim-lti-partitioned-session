@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.3](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.2...v1.3.3) (2025-08-18)
+
+### Bug Fixes
+
+* Fully initialize ValidateSessionAction ([6d6b9a](https://github.com/groton-school/slim-lti-partitioned-session/commit/6d6b9ad87ba5ab4460f693a6397a2341bebe1ad7))
+
+
+---
+
 ## [1.3.2](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.1...v1.3.2) (2025-08-13)
 
 ### Bug Fixes
