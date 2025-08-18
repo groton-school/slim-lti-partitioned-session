@@ -17,6 +17,7 @@ class ValidateSessionAction extends AbstractViewsAction
 
     public function __construct(private SettingsInterface $settings)
     {
+        parent::__construct();
     }
 
     protected function invokeHook(
