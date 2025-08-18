@@ -28,6 +28,7 @@ class FirstPartyLaunchAction extends AbstractViewsAction
         Response $response,
         array $args = []
     ): ResponseInterface {
+        $this->views->setLayout('layout.php');
         return FigResponseCookies::set(
             FigResponseCookies::set(
                 $this->views->render(

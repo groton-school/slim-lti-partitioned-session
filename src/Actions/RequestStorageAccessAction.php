@@ -15,6 +15,7 @@ class RequestStorageAccessAction extends AbstractViewsAction
         Response $response,
         array $args = []
     ): ResponseInterface {
+        $this->views->setLayout('layout.php');
         return $this->views->render(
             $response,
             'requestStorageAccess.php',
