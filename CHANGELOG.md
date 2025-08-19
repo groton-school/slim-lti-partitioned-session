@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.4](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.3...v1.3.4) (2025-08-19)
+
+### Bug Fixes
+
+* Redirect with HTTP to avoid delayed session cookie in Safari ([9c0b79](https://github.com/groton-school/slim-lti-partitioned-session/commit/9c0b79dc19a5d2513c0a3e33978e9864aadfc30e))
+
+
+---
+
 ## [1.3.3](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.2...v1.3.3) (2025-08-18)
 
 ### Bug Fixes
