@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.5](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.4...v1.3.5) (2025-09-04)
+
+### Bug Fixes
+
+* Upgrade to dist version of dflydev/fig-cookies ([9dbd69](https://github.com/groton-school/slim-lti-partitioned-session/commit/9dbd69f3fbc7a36c2f5e42a0957a0ffdfc5854ad))
+
+
+---
+
 ## [1.3.4](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.3...v1.3.4) (2025-08-19)
 
 ### Bug Fixes
