@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "77a22f07752593a4250f55dedcc1c622",
+  "content-hash": "a4280d2cd4ef46d9961a13f18933be40",
   "packages": [
     {
       "name": "dflydev/fig-cookies",
@@ -133,23 +133,23 @@
     },
     {
       "name": "groton-school/slim-lti-shim",
-      "version": "3.0.4",
+      "version": "4.0.0",
       "source": {
         "type": "git",
         "url": "https://github.com/groton-school/slim-lti-shim.git",
-        "reference": "104284c08ef704e487efc6fb8ee5f23e3b66fdb5"
+        "reference": "3659ce8bb594d23545c73e58a4ba8fc1a1f6ea16"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/104284c08ef704e487efc6fb8ee5f23e3b66fdb5",
-        "reference": "104284c08ef704e487efc6fb8ee5f23e3b66fdb5",
+        "url": "https://api.github.com/repos/groton-school/slim-lti-shim/zipball/3659ce8bb594d23545c73e58a4ba8fc1a1f6ea16",
+        "reference": "3659ce8bb594d23545c73e58a4ba8fc1a1f6ea16",
         "shasum": ""
       },
       "require": {
         "dflydev/fig-cookies": "^3.2",
         "ext-json": "*",
         "ext-openssl": "*",
-        "groton-school/slim-norms": "^1.0",
+        "groton-school/slim-norms": "^2.0",
         "odan/session": "^6.4",
         "packbackbooks/lti-1p3-tool": "^6.3",
         "php-di/php-di": "^7.0",
@@ -182,32 +182,32 @@
       "description": "Shim to use packbackbooks/lti-1p3-tool in a Slim Skeleton app",
       "support": {
         "issues": "https://github.com/groton-school/slim-lti-shim/issues",
-        "source": "https://github.com/groton-school/slim-lti-shim/tree/v3.0.4"
+        "source": "https://github.com/groton-school/slim-lti-shim/tree/v4.0.0"
       },
-      "time": "2025-09-04T11:30:14+00:00"
+      "time": "2025-09-09T22:04:11+00:00"
     },
     {
       "name": "groton-school/slim-norms",
-      "version": "1.0.1",
+      "version": "2.0.0",
       "source": {
         "type": "git",
         "url": "https://github.com/groton-school/slim-norms.git",
-        "reference": "c0e3f763bb23c08b8d2ad387e97adfd0b098c731"
+        "reference": "7fd55e8fdc2a76b415a06858c0c47aa6995c7e18"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/groton-school/slim-norms/zipball/c0e3f763bb23c08b8d2ad387e97adfd0b098c731",
-        "reference": "c0e3f763bb23c08b8d2ad387e97adfd0b098c731",
+        "url": "https://api.github.com/repos/groton-school/slim-norms/zipball/7fd55e8fdc2a76b415a06858c0c47aa6995c7e18",
+        "reference": "7fd55e8fdc2a76b415a06858c0c47aa6995c7e18",
         "shasum": ""
       },
       "require": {
-        "php-di/php-di": ">=6.0",
+        "php-di/php-di": "^7.0",
         "psr/http-message": "^2.0",
         "slim/http": "^1.4",
-        "slim/slim": "^4.14"
+        "slim/slim": "^4.12"
       },
       "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.85",
+        "friendsofphp/php-cs-fixer": "^3.76",
         "marcocesarato/php-conventional-changelog": "^1.17"
       },
       "type": "library",
@@ -229,9 +229,9 @@
       "description": "Define some normal interfaces and abstract classes for working with the Slim Framework",
       "support": {
         "issues": "https://github.com/groton-school/slim-norms/issues",
-        "source": "https://github.com/groton-school/slim-norms/tree/v1.0.1"
+        "source": "https://github.com/groton-school/slim-norms/tree/v2.0.0"
       },
-      "time": "2025-08-08T23:37:41+00:00"
+      "time": "2025-09-09T20:35:47+00:00"
     },
     {
       "name": "guzzlehttp/guzzle",

@@ -16,7 +16,7 @@ use Psr\Container\ContainerInterface;
 
 class Dependencies implements DependenciesInterface
 {
-    public static function inject(ContainerBuilder $containerBuilder): void
+    public function inject(ContainerBuilder $containerBuilder): void
     {
         $containerBuilder->addDefinitions([
             LaunchHandlerInterface::class => DI\autowire(LaunchHandler::class),
