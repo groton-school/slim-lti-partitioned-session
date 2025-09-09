@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [2.0.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.5...v2.0.0) (2025-09-09)
+
+### ⚠ BREAKING CHANGES
+
+* Support constructor injection by making static members dynamic ([0e253c](https://github.com/groton-school/slim-lti-partitioned-session/commit/0e253c6d133215e5eba94fd77b4cf7d28a69c666))
+
+
+---
+
 ## [1.3.5](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.4...v1.3.5) (2025-09-04)
 
 ### Bug Fixes
