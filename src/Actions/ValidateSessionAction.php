@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace GrotonSchool\Slim\LTI\PartitionedSession\Actions;
 
-use Dflydev\FigCookies\FigResponseCookies;
-use GrotonSchool\Slim\LTI\PartitionedSession\Middleware\PartitionedSessionMiddleware;
 use GrotonSchool\Slim\LTI\PartitionedSession\SettingsInterface;
-use Odan\Session\SessionInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Response;
 use Slim\Http\ServerRequest;
