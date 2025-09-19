@@ -18,7 +18,7 @@ use Slim\Interfaces\RouteGroupInterface;
 
 class RouteBuilder implements RouteBuilderInterface
 {
-    public function define(App $app, ?MiddlewareInterface ...$innerMiddleware): RouteGroupInterface
+    public function define(App $app, MiddlewareInterface|string|callable ...$innerMiddleware): RouteGroupInterface
     {
         $group = $app->group('/lti', function (RouteCollectorProxyInterface $session) {
             $session->get('/third-party-cookies', ThirdPartyCookieAction::class);
