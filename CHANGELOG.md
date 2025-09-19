@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [2.1.1](https://github.com/groton-school/slim-lti-partitioned-session/compare/v2.1.0...v2.1.1) (2025-09-19)
+
+### Bug Fixes
+
+* Normalize inner middleware definitions ([a44ebc](https://github.com/groton-school/slim-lti-partitioned-session/commit/a44ebcc10e7ef5847fbd39af774c84257adbaeba))
+
+
+---
+
 ## [2.1.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v2.0.0...v2.1.0) (2025-09-19)
 
 ### Features
