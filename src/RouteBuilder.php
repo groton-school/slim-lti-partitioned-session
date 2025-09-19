@@ -11,20 +11,27 @@ use GrotonSchool\Slim\LTI\PartitionedSession\Actions\ValidateSessionAction;
 use GrotonSchool\Slim\LTI\PartitionedSession\Middleware\PartitionedSessionMiddleware;
 use GrotonSchool\Slim\Norms\RouteBuilderInterface;
 use Odan\Session\Middleware\SessionStartMiddleware;
+use Psr\Http\Server\MiddlewareInterface;
 use Slim\App;
 use Slim\Interfaces\RouteCollectorProxyInterface;
 use Slim\Interfaces\RouteGroupInterface;
 
 class RouteBuilder implements RouteBuilderInterface
 {
-    public function define(App $app): RouteGroupInterface
+    public function define(App $app, ?MiddlewareInterface ...$innerMiddleware): RouteGroupInterface
     {
-        return $app->group('/lti', function (RouteCollectorProxyInterface $session) {
+        $group = $app->group('/lti', function (RouteCollectorProxyInterface $session) {
             $session->get('/third-party-cookies', ThirdPartyCookieAction::class);
             $session->get('/first-party-launch', FirstPartyLaunchAction::class);
             $session->get('/request-storage-access', RequestStorageAccessAction::class);
             $session->get('/validate-session', ValidateSessionAction::class);
-        })
+        });
+
+        foreach ($innerMiddleware as $middleware) {
+            $group = $group->add($middleware);
+        }
+
+        return $group
             ->add(SessionStartMiddleware::class)
             ->add(PartitionedSessionMiddleware::class);
     }
