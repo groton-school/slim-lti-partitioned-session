@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [2.1.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v2.0.0...v2.1.0) (2025-09-19)
+
+### Features
+
+* Inject inner middleware into RouteBuilder ([9c776b](https://github.com/groton-school/slim-lti-partitioned-session/commit/9c776b628eb174d9994ecdf7df050265f861fb49))
+
+
+---
+
 ## [2.0.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v1.3.5...v2.0.0) (2025-09-09)
 
 ### ⚠ BREAKING CHANGES
