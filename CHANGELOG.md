@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [2.2.0](https://github.com/groton-school/slim-lti-partitioned-session/compare/v2.1.1...v2.2.0) (2025-10-04)
+
+### Features
+
+* Interstitial spinners ([3bcaa8](https://github.com/groton-school/slim-lti-partitioned-session/commit/3bcaa8ecbb1ebf2cfa2f5379747c5683a7179413))
+
+
+---
+
 ## [2.1.1](https://github.com/groton-school/slim-lti-partitioned-session/compare/v2.1.0...v2.1.1) (2025-09-19)
 
 ### Bug Fixes
