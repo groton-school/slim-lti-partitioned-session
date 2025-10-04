@@ -1,17 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= isset($meta) ? $this->fetch(...$meta) : '' ?>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?= $title ?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        @keyframes spinner-border {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .spinner-border {
+            position: absolute;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            height: 15vw;
+            width: 15vw;
+            display: inline-block;
+            vertical-align: -0.125em;
+            border-radius: 50%;
+            border: 0.25em solid hsla(0, 0%, 50%, 0.75);
+            border-right-color: transparent;
+            animation: 0.75s linear infinite spinner-border;
+        }
+
+        .spinner-border:has(+ .container) {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="spinner-border"></div>
     <?= $content ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 
 </html>
