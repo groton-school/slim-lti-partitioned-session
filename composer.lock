@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "b85aa24ecb4260106bbac46f4cfa2637",
+  "content-hash": "1b551b5b5d7898a4caa9d567b4f754fe",
   "packages": [
     {
       "name": "dflydev/fig-cookies",
