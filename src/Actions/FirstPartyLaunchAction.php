@@ -35,7 +35,7 @@ class FirstPartyLaunchAction extends AbstractViewsAction
                     $response,
                     'firstPartyLaunch.php',
                     [
-                        'title' => 'Firat Party Context'
+                        'title' => 'First Party Context'
                     ]
                 ),
                 ThirdPartyCookieAction::cookie()
